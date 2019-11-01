@@ -74,5 +74,6 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 | Version             | Changes                 |
 | ---------------------| ---------------------|
 | 1.0.0 | Initial version of task |
-| 1.0.1 | Small tweaks to descriptions and result content |
+| 1.0.1 | Small tweaks to descriptions, how search by issuer is performed and result content |
 | 1.0.2 | Small change to how issuer is extracted |
+| 1.0.3 | Changed expiry date to be given as UTC |

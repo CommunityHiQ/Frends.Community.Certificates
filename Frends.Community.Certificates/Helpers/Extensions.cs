@@ -10,13 +10,13 @@ namespace Frends.Community.Certificates.Helpers
         public static void WriteCertificateInfo(this JTokenWriter writer, string storePath, X509Certificate2 cert)
         {
             var issuer = cert.GetNameInfo(X509NameType.SimpleName, true);
-            var notAfter = cert.NotAfter.ToString();
+            var notAfter = cert.NotAfter.ToUniversalTime().ToString();
             writer.WriteStartObject();
             writer.WritePropertyName("Store path");
             writer.WriteValue(storePath);
             writer.WritePropertyName("Issuer");
             writer.WriteValue(issuer);
-            writer.WritePropertyName("Expiry date");
+            writer.WritePropertyName("Expiry date (UTC)");
             writer.WriteValue(notAfter);
             writer.WriteEndObject();
         }

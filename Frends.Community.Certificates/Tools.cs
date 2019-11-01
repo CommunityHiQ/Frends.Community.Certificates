@@ -15,14 +15,17 @@ namespace Frends.Community.Certificates
     public class Tools
     {
         /// <summary>
-        /// Checks for certificates that expire before the given date
+        /// Checks for certificates that expire before the given date from
+        /// certificate stores of current user and local machine
         /// </summary>
-        /// <returns>Issuers of expiring certificates as JToken</returns>
+        /// <returns>
+        /// List of expiring certificates with the following
+        /// information on each: Store path, Issuer and 
+        /// Expiry date (as UTC, format yyyy-MM-ddThh:mm:ss)
+        /// </returns>
         public static JToken FindExpiring(FindExpiringInput input)
         {
             StoreLocation[] locations = new StoreLocation[] { StoreLocation.CurrentUser, StoreLocation.LocalMachine };
-
-            //var expiring = new List<Tuple<string,string>> { };
 
             var expiresBy = DateTime.Now.AddDays(-input.ExpiresIn);
             var issuedBy = input.IssuedBy;

@@ -1,4 +1,5 @@
-﻿using Frends.Community.Certificates;
+﻿using System;
+using Frends.Community.Certificates;
 using Frends.Community.Certificates.Definitions;
 using NUnit.Framework;
 
@@ -13,6 +14,7 @@ namespace Frends.Community.Certificates.Framework452Test
         public void Setup()
         {
             _input.ExpiresIn = 60;
+
         }
 
         [Test]
@@ -20,7 +22,7 @@ namespace Frends.Community.Certificates.Framework452Test
         {
             // Test fetching all expiring certificates
             var result = Tools.FindExpiring(_input);
-            Assert.That(result.ToString() != "");
+            Assert.That(!String.IsNullOrEmpty(result.ToString()));
         }
 
         [Test]
@@ -29,7 +31,7 @@ namespace Frends.Community.Certificates.Framework452Test
             // Test fetching all expiring certificates for certain issuer
             _input.IssuedBy = "HFWS155";
             var result = Tools.FindExpiring(_input);
-            Assert.That(result.ToString() != "");
+            Assert.That(!String.IsNullOrEmpty(result.ToString()));
         }
     }
 }

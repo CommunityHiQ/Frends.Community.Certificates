@@ -77,3 +77,4 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 | 1.0.1 | Small tweaks to descriptions, how search by issuer is performed and result content |
 | 1.0.2 | Small change to how issuer is extracted |
 | 1.0.3 | Changed expiry date to be given as UTC |
+| 1.0.4 | Set expiry date format to yyyy-MM-ddThh:MM:ss, updated task descriptions |

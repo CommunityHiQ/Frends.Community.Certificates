@@ -4,7 +4,7 @@
     <TargetFrameworks>netstandard2.0;net452</TargetFrameworks>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
     <Description>FRENDS Certificate tools</Description>
-    <Version>1.0.3.0</Version>
+    <Version>1.0.4.0</Version>
     <PackageId>Frends.Community.Certificates</PackageId>
     <Authors>HiQ Finland</Authors>
     <Product>Frends.Community.Certificates</Product>

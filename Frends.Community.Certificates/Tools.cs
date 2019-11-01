@@ -49,7 +49,7 @@ namespace Frends.Community.Certificates
 
                             if (!String.IsNullOrEmpty(input.IssuedBy))
                             {
-                                var certificate = store.Certificates.Cast<X509Certificate2>().FirstOrDefault(c => c.Issuer.Contains($"CN={issuedBy}"));
+                                var certificate = store.Certificates.Cast<X509Certificate2>().FirstOrDefault(c => c.Issuer.ToLower().Contains($"CN={issuedBy.ToLower()}"));
 
                                 if (certificate != null)
                                 {

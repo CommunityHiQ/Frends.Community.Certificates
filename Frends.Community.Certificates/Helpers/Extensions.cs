@@ -9,10 +9,10 @@ namespace Frends.Community.Certificates.Helpers
     {
         public static void WriteCertificateInfo(this JTokenWriter writer, string storePath, X509Certificate2 cert)
         {
-            var issuer = cert.Issuer;
+            var issuer = cert.GetNameInfo(X509NameType.SimpleName, true);
             var notAfter = cert.NotAfter.ToString();
             writer.WriteStartObject();
-            writer.WritePropertyName("Store Path");
+            writer.WritePropertyName("Store path");
             writer.WriteValue(storePath);
             writer.WritePropertyName("Issuer");
             writer.WriteValue(issuer);

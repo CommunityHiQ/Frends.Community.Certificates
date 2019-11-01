@@ -32,7 +32,7 @@ Finds certificates that are expiring within the given amount of days.
 ### Result
 | Property             | Type                 | Description                          | Example |
 | ---------------------| ---------------------| ------------------------------------ | ----- |
-|  | JToken | A JObject with the properties "Found expiring" (true/false) and "Expiring" (a JToken array of certificates) |  |
+|  | JToken | A JObject with the properties "Found expiring" (true/false) and "Expiring" (an empty JArray or a JToken array of certificates). Each JToken in the array "Expiring" contains the properties "Store path", "Issuer name" and "Expiry date". |  |
 
 # License
 
@@ -74,3 +74,5 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 | Version             | Changes                 |
 | ---------------------| ---------------------|
 | 1.0.0 | Initial version of task |
+| 1.0.1 | Small tweaks to descriptions and result content |
+| 1.0.2 | Small change to how issuer is extracted |

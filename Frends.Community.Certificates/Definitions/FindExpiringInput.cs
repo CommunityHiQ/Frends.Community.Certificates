@@ -16,7 +16,7 @@ namespace Frends.Community.Certificates.Definitions
         public int ExpiresIn { get; set; }
 
         /// <summary>
-        /// The task returns a list of certificates that expire in the given amount of days.
+        /// Optional parameter for searching expiring certificates from a specific issuer.
         /// </summary>
         [DisplayFormat(DataFormatString = "Text")]
         [DefaultValue("\"\"")]

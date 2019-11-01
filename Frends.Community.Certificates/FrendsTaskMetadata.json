@@ -1,0 +1,7 @@
+{
+  "Tasks": [
+    {
+      "TaskMethod": "Frends.Community.Certificates.Tools.FindExpiring"
+    }
+  ]
+}

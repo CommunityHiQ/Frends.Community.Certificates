@@ -17,6 +17,9 @@ namespace Frends.Community.Certificates.Definitions
 
         /// <summary>
         /// Optional parameter for searching expiring certificates from a specific issuer.
+        /// Filter's based on CN, does not find certificates with no CN. 
+        /// Can be either issuer's full name or part of the issuer's name.
+        /// Case insensitive. Note: CNs that contain the character ',' are currently not handled correctly.
         /// </summary>
         [DisplayFormat(DataFormatString = "Text")]
         [DefaultValue("\"\"")]

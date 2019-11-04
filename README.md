@@ -26,7 +26,7 @@ Finds certificates that are expiring within the given amount of days.
 | Property             | Type                 | Description                          | Example |
 | ---------------------| ---------------------| ------------------------------------ | ----- |
 | ExpiresIn | int | The amount of days within which the certificate expires |
-| IssuedBy | string | The issuer of the certificate that should be searched for  |  |
+| IssuedBy | string | The issuer of the certificate that should be searched for. Filter's based on CN, does not find certificates with no CN. Can be either issuer's full name or part of the issuer's name. Case insensitive. Note: CNs that contain the character ',' are currently not handled correctly.  |  |
 
 
 ### Result
@@ -79,3 +79,4 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 | 1.0.3 | Changed expiry date to be given as UTC |
 | 1.0.4 | Set expiry date format to yyyy-MM-ddThh:MM:ss, updated task descriptions |
 | 1.0.5 | Small fix to expiry date format |
+| 1.0.6 | Made a small correction to issuer filtering |

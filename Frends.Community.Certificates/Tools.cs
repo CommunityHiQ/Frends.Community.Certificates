@@ -52,7 +52,8 @@ namespace Frends.Community.Certificates
 
                             if (!String.IsNullOrEmpty(input.IssuedBy))
                             {
-                                var certificate = store.Certificates.Cast<X509Certificate2>().FirstOrDefault(c => c.Issuer.ToLower().Contains($"CN={issuedBy.ToLower()}"));
+                                // Extract issuer's CN value from Issuer and compare with IssuedBy
+                                var certificate = store.Certificates.Cast<X509Certificate2>().FirstOrDefault(c => c.Issuer.Split(',')[0].ToLower().Replace("CN=","").Contains($"{issuedBy.ToLower()}"));
 
                                 if (certificate != null)
                                 {

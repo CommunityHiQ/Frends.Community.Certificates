@@ -53,7 +53,7 @@ namespace Frends.Community.Certificates
                             if (!String.IsNullOrEmpty(input.IssuedBy))
                             {
                                 // Extract issuer's CN value from Issuer and compare with IssuedBy
-                                var certificate = store.Certificates.Cast<X509Certificate2>().FirstOrDefault(c => c.Issuer.Split(',')[0].ToLower().Replace("CN=","").Contains($"{issuedBy.ToLower()}"));
+                                var certificate = store.Certificates.Cast<X509Certificate2>().FirstOrDefault(c => c.Issuer.Split(',')[0].ToLower().Replace("cn=","").Contains($"{issuedBy.ToLower()}"));
 
                                 if (certificate != null)
                                 {
@@ -81,6 +81,13 @@ namespace Frends.Community.Certificates
                         catch (CryptographicException e)
                         {
                             throw new Exception("Error, certificate store not accesible", e);
+                        }
+                        finally
+                        {
+                            if (store != null)
+                            {
+                                store.Dispose();
+                            }
                         }
                     }
                 }

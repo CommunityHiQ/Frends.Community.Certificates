@@ -80,3 +80,4 @@ NOTE: Be sure to merge the latest from "upstream" before making a pull request!
 | 1.0.4 | Set expiry date format to yyyy-MM-ddThh:MM:ss, updated task descriptions |
 | 1.0.5 | Small fix to expiry date format |
 | 1.0.6 | Made a small correction to issuer filtering |
+| 1.0.7 | Updated to framework 4.6.1 to enable disposal of X509Store |

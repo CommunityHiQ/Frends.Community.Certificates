@@ -29,7 +29,7 @@ namespace Frends.Community.Certificates.Framework452Test
         public void TestFindExpiringByIssuer()
         {
             // Test fetching all expiring certificates for certain issuer
-            _input.IssuedBy = "liability";
+            _input.IssuedBy = "hiq";
             var result = Tools.FindExpiring(_input);
             Assert.That(!String.IsNullOrEmpty(result.ToString()));
         }

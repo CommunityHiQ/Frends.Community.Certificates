@@ -9,9 +9,9 @@
     <ProjectGuid>{9D7FBE27-8AB9-4254-99CD-E0724BF120B4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Frends.Community.Certificates.Framework452Test</RootNamespace>
-    <AssemblyName>Frends.Community.Certificates.Framework452Test</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>Frends.Community.Certificates.Framework461Test</RootNamespace>
+    <AssemblyName>Frends.Community.Certificates.Framework461Test</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
